@@ -29,6 +29,20 @@
     --h1: 3.5rem;
     --h2: 2.5rem;
   }
+
+  /* Typography */
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Medium.eot');
+    src: url('fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
   
 
 .btn-primary {
@@ -56,6 +70,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html,
+body{
+    min-width: 320px;
+}
+body{
+    font-family: 'Gilroy';
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 a{
     text-decoration: none;
