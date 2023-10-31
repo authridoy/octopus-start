@@ -43,7 +43,8 @@
 
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg:#fff;
+    --bs-btn-bg:#0016F0;
+
     --bs-btn-border-light-color: #0d6efd;
     --bs-btn-border-color: #0d6efd;
     --bs-btn-hover-color: #fff;
@@ -162,7 +163,7 @@ a{
 
 /*================ header area ================*/
 .header{
-    padding: 18px 35px;
+    padding: 18px 32px;
     border-bottom: 1px solid var(--card-border);
 }
 .notification{
@@ -204,6 +205,8 @@ a{
     width: 100%;
     height: 100%;
 }
+
+/*================= content card =================*/
 .content-container{
     padding: 21px 32px;
 }
@@ -211,7 +214,34 @@ a{
     max-height: calc(100vh - 122px);
     overflow-y: auto;
 }
-
-h1{
+.content .card{
+    padding: 40px;
+    border: 1px solid var(--card-borde);
+}
+.content .card svg{
+    width: 179px;
+    height: 112px;
+    margin: auto;
+}
+.content .card h1{
     font-size: var(--h1);
+    color: var(--heading-text);
+    font-weight: 500;
+    max-width: 755px;
+    padding: 20px 0 18px;
+    margin: auto;
+}
+.content .card p{
+    font-size: var(--p);
+    color: var(--body-text);
+    max-width: 755px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.box-btn{
+    font-size: 15px;
+    color: var(--bs-btn-color);
+    background: var(--bs-btn-bg);
+    padding: 15px 32px;
+    border-radius: 8px;
 }
