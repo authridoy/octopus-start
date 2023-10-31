@@ -1,10 +1,9 @@
 :root {
-    /* colors */
+    --deep-blue-primary: #0016F0;
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
-    --bs-red: #D35A50;
     --bs-orange: #fd7e14;
     --bs-yellow: #ffc107;
     --bs-green: #74B980;
@@ -12,42 +11,59 @@
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
     --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-primary: #0016F0;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
     --bs-dark: #212529;
+
+
+    /* colors */    
+    --bs-gray-dark: #06082A;
+    --bs-light: #F5F5F5;
+    --bs-white: #fff;
+    --bs-red: #D35A50;
+    --deep-blue-primary: #0016F0;
+
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 
-    /* fonts */
-    --h1: 3.5rem;
-    --h2: 2.5rem;
-  }
+    --siderbar-bg: #06082A;
+    --card-border: #E5E9EE;
+    --card-btn-border: #E9E9E9;
+    --notification-btn-border: #E4E5E7;
+    --border-light: #E5E9EE;
+    --sidebar-nav-hover: #2B2D4A;
+    --sidebar-separetor: rgb(235 239 245 / 10%);
+    --heading-text: #020916;
+    --body-text: #525E75;
 
-  /* Typography */
-  @font-face {
+    /* typography */
+    --h1: 1.625rem;
+    --h2: 1.375rem;
+    --h3: 1.25rem;
+    --p: 0.875rem;
+    
+}
+
+/* Typography */
+@font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Medium.eot');
-    src: url('fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gilroy-Medium.woff2') format('woff2'),
-        url('fonts/Gilroy-Medium.woff') format('woff');
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
-
-  
-
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-bg:#fff;
+    --bs-btn-border-light-color: #0d6efd;
     --bs-btn-border-color: #0d6efd;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #0b5ed7;
@@ -62,10 +78,6 @@
     --bs-btn-disabled-border-color: #0d6efd;
 }
 
-.sidebar-nav a{
-    color: var(--bs-white);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -74,6 +86,7 @@
 html,
 body{
     min-width: 320px;
+    overflow: hidden;
 }
 body{
     font-family: 'Gilroy';
@@ -81,6 +94,25 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 a{
     text-decoration: none;
 }
@@ -90,11 +122,46 @@ a{
     width: 100%;
 }
 .sidebar{
-    max-width: 300px;
-    min-width: 300px;
-    background: #06082A ;
+    max-width: 250px;
+    min-width: 250px;
+    background: var(--siderbar-bg);
     transition: all .035s ease-in-out;
 }
+.main-logo {
+    border-bottom: 1px solid var(--sidebar-separetor);
+    padding: 13px 15px;
+}
+.main-logo img{
+    width: 179px;
+    height: 43px;
+}
+.sidebar-nav{
+    list-style: none;
+    padding: 12px 15px;
+}
+.sidebar-nav li{
+    margin-top: 8px;
+}
+.sidebar-nav li a{
+    color: var(--bs-white);
+    border-radius: 6px;
+    padding: 12px;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar-nav li a:hover{
+    background: var(--sidebar-nav-hover);
+}
+
+.sidebar-nav li a .nav-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+}
+
+
+
 .main{
     display: flex;
     flex-direction: column;
@@ -103,15 +170,15 @@ a{
     overflow: hidden;
     transition: all 0.35s ease-in-out;
     width: 100%;
-    background: #F5F5F5;
+    background: var(--bs-light);
 }
 
-.nav-icon{
-    width: 18px;
-    height: 18px;
+.notification{
+    padding: 13px;
+    border: 1px solid ;
 }
+
 
 h1{
     font-size: var(--h1);
 }
-h2{}
