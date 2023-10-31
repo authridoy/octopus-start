@@ -1,26 +1,6 @@
 :root {
-    --deep-blue-primary: #0016F0;
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #74B980;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-dark: #212529;
-
 
     /* colors */    
-    --bs-gray-dark: #06082A;
     --bs-light: #F5F5F5;
     --bs-white: #fff;
     --bs-red: #D35A50;
@@ -34,7 +14,6 @@
     --card-border: #E5E9EE;
     --card-btn-border: #E9E9E9;
     --notification-btn-border: #E4E5E7;
-    --border-light: #E5E9EE;
     --sidebar-nav-hover: #2B2D4A;
     --sidebar-separetor: rgb(235 239 245 / 10%);
     --heading-text: #020916;
@@ -122,7 +101,7 @@ body{
 a{
     text-decoration: none;
 }
-
+/*================ sidebar area ================*/
 .sidebar{
     max-width: 250px;
     min-width: 250px;
@@ -151,6 +130,7 @@ a{
 }
 .sidebar-nav li a{
     color: var(--bs-white);
+    font-size: 14px;
     border-radius: 6px;
     padding: 12px;
     display: inline-block;
@@ -168,23 +148,69 @@ a{
 }
 
 
-
+/*================ main area ================*/
 .main{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-width: 0;
-    overflow: hidden;
     transition: all 0.35s ease-in-out;
     width: 100%;
     background: var(--bs-light);
+    position: relative;
 }
 
+/*================ header area ================*/
+.header{
+    padding: 18px 35px;
+    border-bottom: 1px solid var(--card-border);
+}
 .notification{
     padding: 13px;
-    border: 1px solid ;
+    width: 44px;
+    height: 44px;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid var(--notification-btn-border);
+    border-radius: 50%;
+    margin: 0 14px;
 }
-
+.notification .notifiication-icon{
+    width: 16.5px;
+    height: 16.5px;
+}
+.header .add{
+    background: var(--deep-blue-primary);
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 16px;
+    padding: 11px;
+    border-radius: 50%;
+    margin: 0 12px 0;
+}
+.header .add-icon{
+    width: 22px;
+    height: 22px;
+}
+.profile{
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+}
+.content-container{
+    padding: 21px 32px;
+}
+.content{
+    max-height: calc(100vh - 122px);
+    overflow-y: auto;
+}
 
 h1{
     font-size: var(--h1);
