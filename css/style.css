@@ -1,9 +1,11 @@
 :root {
+    
 
     /* colors */    
     --bs-light: #F5F5F5;
     --bs-white: #fff;
     --bs-red: #D35A50;
+    --bs-green: #74B980;
     --deep-blue-primary: #0016F0;
 
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -18,6 +20,7 @@
     --sidebar-separetor: rgb(235 239 245 / 10%);
     --heading-text: #020916;
     --body-text: #525E75;
+    --placeholder-text-color: #8B94A5;
 
     --scroll-thumb-bg: rgba(204, 204, 204, 0.80);
 
@@ -26,8 +29,10 @@
     --h2: 1.375rem;
     --h3: 1.25rem;
     --p: 0.875rem;
+    --span: 0.875rem;
     
 }
+
 
 /* Typography */
 @font-face {
@@ -102,6 +107,10 @@ body{
 a{
     text-decoration: none;
 }
+h1, h2, h3{
+    margin: 0;
+}
+
 /*================ sidebar area ================*/
 .sidebar{
     max-width: 250px;
@@ -159,6 +168,7 @@ a{
     width: 100%;
     background: var(--bs-light);
     position: relative;
+    padding-bottom: 35px;
 }
 
 /*================ header area ================*/
@@ -244,4 +254,127 @@ a{
     background: var(--bs-btn-bg);
     padding: 15px 32px;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 991.8px) {
+    .sidebar.show:not(.collapse){
+        margin-left: -250px;
+    }    
+    .sidebar.collapse.show{
+        margin-left: 0px;
+    }
+}
+
+/*=================================== select framework css start ================================*/
+.main-body{
+    max-height: calc(100vh - 122px);
+    overflow-y: auto;
+}
+.card-wrapper{
+    padding: 0 32px;
+}
+.container-fluid{
+    padding: 0;
+}
+.card-wrapper .card-title{
+    padding: 20px 0 18px;
+}
+.card-wrapper .card-title h2{
+    font-size: var(--h2);
+    color: var(--heading-text);
+    font-weight: 600;
+}
+.card-wrapper .search-bar{
+    border: 1px solid var(--card-border);
+    width: 250px;
+    padding: 18px 16px;
+    border-radius: 10px;
+    background: var(--bs-white);
+    box-shadow: 0px 0px 4px 0px rgba(115, 134, 203, 0.10);
+}
+.card-wrapper .search-bar .search-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+.card-wrapper .search-bar input{
+    width: calc(100% - 32px);
+    background: transparent;
+    border: none;
+    color: var(--placeholder-text-color);
+}
+.card-wrapper .search-bar input::placeholder{
+    font-size: 15px;
+    color: var(--placeholder-text-color);
+}
+.card-wrapper .search-bar input:focus{
+    outline: none;
+}
+.card-wrapper .card{
+    padding: 20px 20px 28px;
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.card-wrapper .card .card-heading img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 23px;
+
+}
+.card-wrapper .card .card-heading .card-text h3{
+    font-size: var(--h3);
+    color: var(--heading-text);
+    font-weight: 500;
+}
+.card-wrapper .card .card-heading .card-text span{
+    font-size: var(--span);
+    color: var(--body-text);
+    font-weight: 500;
+}
+.card-body{
+    padding: 30px 0 45px;
+}
+.card-body .card-body-item{
+    border: 1px solid var(--card-border);
+    padding: 13px 16px 11px;
+    border-radius: 10px;
+    width: 179px;
+    margin-right: 15px;
+}
+.card-body .card-body-item:nth-child(2){
+    margin: 0;
+}
+.card-body .card-body-item h3{
+    font-size: var(--h3);
+}
+.text-red{
+    color: var(--bs-red);
+}
+.text-green{
+    color: var(--bs-green);
+}
+.card-footer-section .card-btn{
+    color: var(--deep-blue-primary);
+    border: 1px solid var(--deep-blue-primary);
+    font-size: var(--span);
+    background: transparent;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-weight: 500;
+}
+.card-icon .icon-box{
+    border:1px solid var(--card-btn-border);
+    background: var(--bs-white);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+.card-icon .icon-box svg{
+    width: 18px;
+    height: 18px;
 }
