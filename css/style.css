@@ -30,6 +30,10 @@
     --h3: 1.25rem;
     --p: 0.875rem;
     --span: 0.875rem;
+
+    /* Nav font */
+    --sidebar-nav-font: 'Gilroy';
+    --sidebar-nav-font-weight: 600;
     
 }
 
@@ -45,6 +49,18 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.eot');
+    src: url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-SemiBold.woff2') format('woff2'),
+        url('../fonts/Gilroy-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 .btn-primary {
     --bs-btn-color: #fff;
@@ -120,22 +136,24 @@ h1, h2, h3{
 }
 .main-logo {
     border-bottom: 1px solid var(--sidebar-separetor);
-    padding: 13px 15px;
+    padding: 13px 16px;
 }
 .main-logo img{
     width: 179px;
     height: 43px;
 }
 .sidebar-nav{
-    padding: 12px 15px;
+    padding: 20px 16px;
 }
+
 .sidebar-nav ul{
     list-style: none;
     padding: 0;
-    max-height: calc(100vh - 94px);
+    margin-bottom: 0;
+    max-height: calc(100vh - 110px);
     overflow-y: auto;
 }
-.sidebar-nav li{
+.sidebar-nav li + li{
     margin-top: 8px;
 }
 .sidebar-nav li a{
@@ -143,9 +161,10 @@ h1, h2, h3{
     font-size: 14px;
     border-radius: 6px;
     padding: 12px;
-    display: inline-block;
     width: 100%;
     transition: all 0.3s ease-in-out;
+    font-family: var(--sidebar-nav-font);
+    font-weight: var(--sidebar-nav-font-weight);
 }
 .sidebar-nav li a:hover{
     background: var(--sidebar-nav-hover);
@@ -175,6 +194,13 @@ h1, h2, h3{
 .header{
     padding: 18px 32px;
     border-bottom: 1px solid var(--card-border);
+}
+.sidebar-toggle,
+.sidebar-toggle:focus,
+.sidebar-toggle:active{
+    outline: none;
+    border: 0;
+    box-shadow: none;
 }
 .notification{
     padding: 13px;
