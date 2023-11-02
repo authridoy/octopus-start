@@ -68,6 +68,7 @@
     --spacing-2: 0.5rem; /* 8px */;
     --spacing-3: 0.75rem; /* 12px */
     --spacing-4: 1rem; /* 16px */
+    --spacing-4_5: 1.125rem; /* 18px */
     --spacing-5: 1.25rem; /* 20px */
     --spacing-6: 1.5rem; /* 24px */
     --spacing-7: 1.75rem; /* 28px */
@@ -87,6 +88,7 @@
     --bs-border-radius: 10px;
     
 }
+
 
 /* scrolbar style */
 ::-webkit-scrollbar {
@@ -148,11 +150,14 @@ h4{
 }
 
 .btn{
-    --bs-btn-padding-x: var(--spacing-8);
-    --bs-btn-padding-y: 0.9375rem;
     --bs-btn-font-size: 0.9375rem;
     --bs-btn-font-weight: var(--font-weight-semibold);
     --bs-btn-font-family: var(--bs-body-font-family);
+}
+
+.btn:not(.rounded-circle, .sidebar-toggle){
+    --bs-btn-padding-x: var(--spacing-8);
+    --bs-btn-padding-y: 0.9375rem; /* 15px */
 }
 
 /* Button primary */
@@ -180,7 +185,7 @@ h4{
     max-width: var(--siderbar-width);
     min-width: var(--siderbar-width);
     background: var(--siderbar-bg);
-    transition: width 0.35s ease;
+    transition: none;
 }
 .sidebar.collapsing{
     height: 100%;
@@ -246,7 +251,7 @@ h4{
 
 /*================ header area ================*/
 .header{
-    padding: 1.125rem var(--spacing-8);
+    padding: var(--spacing-4_5) var(--spacing-8);
     border-bottom: 1px solid var(--card-border);
 }
 
@@ -256,14 +261,12 @@ h4{
     outline: none;
     border: 0;
     box-shadow: none;
+    padding: 0;
 }
 
 .action-btns .btn{
     width: var(--header-action-btn-size);
     height: var(--header-action-btn-size);
-}
-
-.action-btns .btn + .btn{
     margin-left: var(--spacing-6);
 }
 
@@ -442,4 +445,34 @@ h4{
 .card-icon .icon-box svg{
     width: 18px;
     height: 18px;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 767px) {
+    /* root variable */
+    :root{
+         /* == font size == */
+        --font-size-h1: 1.625rem; /* 36px */
+        --font-size-h2: 1.375rem; /* 26px */
+        --font-size-h3: 1.25rem; /* 22px */
+        --font-size-h4: 1.125rem; /* 20px */
+
+        /* size */
+        --header-action-btn-size: 32px;
+    }
+
+    /* button spacing */
+    .btn:not(.rounded-circle, .sidebar-toggle){
+        --bs-btn-padding-x: var(--spacing-5);
+        --bs-btn-padding-y: var(--spacing-2); /* 15px */
+    }
+    /* Header style */
+    .header{
+        padding: var(--spacing-3) var(--spacing-5);
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .action-btns .btn {
+        margin-left: var(--spacing-3);
+    }
 }
