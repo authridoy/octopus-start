@@ -287,6 +287,7 @@ h4{
 /*================= content area =================*/
 .content-container{
     padding: var(--spacing-5) var(--spacing-8);
+    min-width: 320px;
 }
 .content{
     max-height: calc(100vh - 122px);
@@ -474,5 +475,14 @@ h4{
 
     .action-btns .btn {
         margin-left: var(--spacing-3);
+    }
+
+    /* Container style */
+    .content-container{
+        padding: var(--spacing-5);
+    }
+
+    .content{
+        max-height: calc(100vh - 97px);
     }
 }
