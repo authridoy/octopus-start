@@ -478,12 +478,6 @@ margin-top: var(--spacing-5);
 }
 
 /*===== step-wizard =====*/
-
-.step-wizard {
-    background-color: var(--bs-white);
-    border-radius: var(--bs-border-radius);
-    border: var(--card-border);
-}
 .step-wizard-list{
     color: var(--heading-text);
     font-size: var(--step-wizard-font-size);
