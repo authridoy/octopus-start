@@ -568,7 +568,8 @@ margin-top: var(--spacing-5);
     color: var(--body-text);
     font-weight: var(--font-weight-medium);
 }
-.footer svg{
+
+.footer .footer-btn-box svg{
     margin-left: var(--spacing-2);
 }
 .footer .framework-selected{
@@ -582,8 +583,20 @@ margin-top: var(--spacing-5);
 
 
 /*====== selected framework 3 ======*/
-.footer-btn-box button{ 
-    color: var(--blue-secoundary);
+.footer-btn-box button{
+    margin-right: 18px;
+}
+.footer-btn-box button:hover svg{
+    stroke:"#fff";
+}
+.footer-btn-box button + button{
+    margin-right: 0;
+}
+.footer-btn-box button svg{
+    margin-right: 4px;
+}
+.footer-btn-box button svg + svg{ 
+    margin-right: 0;
 }
 
 
