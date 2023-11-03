@@ -30,6 +30,7 @@
     --bs-green: #74B980;
     --deep-blue-primary: #0016F0;
     --blue-primary: #3094F1;
+    --blue-secoundary: #3060F1;
 
     --siderbar-bg: #06082A;
     --card-border: #E5E9EE;
@@ -578,6 +579,21 @@ margin-top: var(--spacing-5);
     font-size: var(--footer-select-btn-size);
     font-weight: var(--font-weight-semibold);
 }
+
+
+/*====== selected framework 3 ======*/
+.footer-btn-box button{ 
+    color: var(--blue-secoundary);
+}
+
+
+
+
+
+
+
+
+
 
 
 
