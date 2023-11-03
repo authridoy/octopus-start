@@ -431,7 +431,6 @@ h4{
     padding: var(--spacing-3) var(--spacing-4);
     flex-grow: 1;
 }
-
 .text-red{
     color: var(--bs-red);
 }
