@@ -490,7 +490,7 @@ margin-top: var(--spacing-5);
 }
 
 .step-wizard-item{
-    padding: 0 20px;
+    padding: 0 var(--spacing-5);
     flex-basis: 0;
     -webkit-box-flex: 1;
     -ms-flex-positive:1;
@@ -546,7 +546,7 @@ margin-top: var(--spacing-5);
 .progress-label{
     font-size: var(--step-wizard-font-size);
     font-weight: var(--font-weight-semibold);
-    margin-top: 10px;
+    margin-top: var(--spacing-4);
 }
 .current-item .progress-count{
     color: var(--bs-white);
