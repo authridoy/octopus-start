@@ -57,6 +57,7 @@
     --bs-body-font-family: 'Gilroy';
 
     /* == font size == */
+    --table-header-font-size: 0.75rem; /* 12px */
     --bs-body-font-size: 0.875rem; /* 14px */
     --heading-font-size: 0.938rem; /* 15px */
     --step-wizard-font-size: 1rem; /* 16px */
@@ -671,12 +672,6 @@ margin-top: var(--spacing-5);
     font-size: var(--bs-body-font-size);
 }
 
-
-
-
-
-
-
 .footer-btn-box button{
     margin-right: 18px;
 }
@@ -694,8 +689,29 @@ margin-top: var(--spacing-5);
 }
 
 
-
-
+/*====== selected framework 4 ======*/
+.table-area{
+    max-height: calc(100vh - 361px);
+    overflow-y: auto;
+}
+.table>:not(caption)>*>* {
+    padding: var(--spacing-4_5) var(--spacing-6);
+}
+table tr th{
+    font-size: var(--table-header-font-size);
+    font-weight: var(--font-weight-semibold);
+    --bs-table-color: var(--body-text);
+    text-transform: uppercase;
+}
+table tr td{
+ color: var(--heading-text);
+ font-size: var( --bs-body-font-size);
+ font-weight: var(--font-weight-medium);
+}
+.table-hover>tbody>tr:hover>* {
+    --bs-table-color-state: var(--bs-table-hover-color);
+    --bs-table-bg-state: var(--bs-light);
+}
 
 
 
