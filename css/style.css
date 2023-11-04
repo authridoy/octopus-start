@@ -615,8 +615,9 @@ margin-top: var(--spacing-5);
 .form-check-input:focus {
     box-shadow: none;
 }
-
-
+.list-group-item {
+    border: none;
+}
 
 
 
