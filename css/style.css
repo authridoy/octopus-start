@@ -585,11 +585,6 @@ margin-top: var(--spacing-5);
 /*====== selected framework 3 ======*/
 
 .accordion{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 20px;
 }
 .accordion-button:not(.collapsed) {
     color: var(--bs-accordion-active-color);
